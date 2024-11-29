@@ -12,7 +12,9 @@ function CreateUser() {
   function handleSubmit(e) {
     e.preventDefault();
     if (username === "") return;
-    dispatch(updateName(username));
+    dispatch(updateName(username)); // dispatching an action through action creatorFn
+    // updating the store:(here) name entered in input
+    // username becomes action.payload in userSlice, will update state.username
     navigate("/menu");
   }
   return (

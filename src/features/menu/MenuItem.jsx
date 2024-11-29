@@ -16,10 +16,10 @@ function MenuItem({ pizza }) {
     // Add the pizza to the cart
     const newItem = {
       pizzaId: id,
-      name: "Mediterranean",
+      name,
       quantity: 1,
-      unitPrice: 360,
-      totalPrice: 1 * unitPrice,
+      unitPrice,
+      totalPrice: unitPrice * 1,
     };
     dispatch(addItem(newItem));
   }

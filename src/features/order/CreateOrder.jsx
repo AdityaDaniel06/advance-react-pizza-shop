@@ -84,7 +84,7 @@ function CreateOrder() {
               </p>
             )}
           </div>
-          {!position.latitude && !position.longitude && (
+          {!position?.latitude && !position?.longitude && (
             <span className="absolute right-[3px] top-[3px] z-10">
               <Button
                 type="small"
@@ -121,8 +121,8 @@ function CreateOrder() {
             type="hidden"
             name="position"
             value={
-              position.longitude && position.latitude
-                ? `${position.latitude},${position.longitude}`
+              position?.longitude && position?.latitude
+                ? `${position?.latitude},${position?.longitude}`
                 : ""
             }
           />
